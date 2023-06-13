@@ -1,39 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Img from '../components/images/PMReady.png';
 ---
 
 <Layout title="PMReady Waitlist">
-	<main>
-		<div class="center">
-			<p>Join the waitlist for</p>
-			<p class="gradient-text">PMReady!</p>
-		</div>
-	</main>
+  <div class="header-container">
+    <div class="logo-container">
+      <img src={Img} alt="PMReady Logo">
+    </div>
+    <p class="brand-text gradient-text">PM Ready</p>
+  </div>
+  <div class="center-container">
+    <p class="join-text">Join the waitlist for</p>
+    <p class="title-text gradient-text">PMReady!</p>
+    <br />
+    <br />
+    <p class="description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <button class="join-button" onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfex2Az45am9FtGFzW2U18nc8SF_UmKxNO2RCILY0-nCgWCrA/viewform'">Join the Waitlist</button>
+  </div>
+  <div class="big-circle"></div>
+  <div class="triangle"></div>
+  <div class="square"></div>
+  <div class="gridContainer" id="gridContainer"></div>
+
+
+</main>
 </Layout>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:wght@200&family=Raleway:wght@300&display=swap');
 
 body {
-    background-color: #EDEDED;  
-    margin: 0px;  
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    font-size: 30px;
-    display: grid;
-    color:	#235789;
+  background-color: #EDEDED;
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  display: grid;
+  color: #235789;
+  overflow: hidden;
+}
 
-  }
-
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: large;
-  }
+.center-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: large;
+}
 
 .gradient-text {
   background: linear-gradient(to right, #79ADDC, #CAD593);
@@ -42,8 +58,126 @@ body {
 }
 
 p {
-	font-size: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #EDEDED;
+  margin: 10px;
+  padding: 10px;
+}
+
+.logo-container {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-text {
+  margin-left: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.join-text {
+  margin-top: -10px;
+}
+
+.description-text {
+  font-size: 23px;
+  color: #000000;
+  margin-top: -10px;
+}
+
+.join-button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  margin-top: 50px;
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #FF6978;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border: 2px solid;
+}
+
+.join-button:hover {
+  background-color: #EDEDED;
+  border: 2px solid #FF6978;
+  color: #FF6978;
+}
+
+.big-circle {
+  position: absolute;
+  bottom: -30px;
+  left: 10%;
+  width: 200px;
+  height: 200px;
+  background-color: #CAD593;
+  border-radius: 50%;
+}
+
+.triangle {
+  position: absolute;
+  top: 200px;
+  left: -15px;
+  width: 0;
+  height: 50px;
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+  border-bottom: 60px solid #FF6978;
+}
+
+.square {
+  position: absolute;
+  bottom: 150px;
+  right: -37px;
+  width: 150px;
+  height: 150px;
+  background-color: #235789;
+}
+
+.gridContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 200px;
+  /* background-color: black; */
+}
+
+.circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: black;
+  margin: 2px;
+  float: left;
+  z-index: -1;
+}
+
+.row {
+  clear: both;
+}
 
 </style>
