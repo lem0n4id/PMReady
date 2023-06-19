@@ -7,7 +7,7 @@ import Img from '../components/images/PMReady.png';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/test-astro-yt-embed/favicon.svg" />
 		<link
-			href="https://fonts.googleapis.com/css?family=Poppins"
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
 		<title>PMReady Waitlist</title>
@@ -20,12 +20,29 @@ import Img from '../components/images/PMReady.png';
 	</head>
   <body class="bg-[#EDEDED] text-black font-poppins">
     <header>
-      <div class="container bg-white mx-auto px-10 py-6 ">
+      <div class="bg-white mx-auto px-10 py-6 ">
         <a href="/" title="Home" class="flex flex-wrap items-center">
-          <img class="w-14 md:w-16" src={Img} alt="PMReady Logo" />
-          <span class="font-normal text-5xl hidden md:block ml-3" style="background: linear-gradient(to right, #79ADDC, #CAD593); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">PMReady</span>
+          <img class="w-10 md:w-12" src={Img} alt="PMReady Logo" />
+          <span class="font-normal text-3xl hidden md:block ml-3" style="background: linear-gradient(to right, #79ADDC, #CAD593); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            PMReady
+          </span>
         </a>
       </div>
     </header>
+    <main>
+      <div class="w-[90%] md:w-[67%] mx-auto px-5 py-10 pb-5 md:py-20 md:pb-10 text-center">
+        <h1 class="text-5xl pb-5 md:pb-10 text-[#235789]">Join the waitlist for <br/>
+          <span style="background: linear-gradient(to right, #79ADDC, #CAD593); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            PMReady!
+          </span>
+        </h1>
+        <p class="text-2xl md:text-3xl my-5 mb-20 font-light">
+          Excel in project management with exclusive training! Expert-led courses, workshops & mentoring. Sign up now!
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfex2Az45am9FtGFzW2U18nc8SF_UmKxNO2RCILY0-nCgWCrA/viewform" class="bg-[#FF6978] text-white font-medium text-2xl py-4 px-14 rounded-full">
+          Waitlist
+        </a> 
+      </div>
+    </main> 
   </body>
 </html>
