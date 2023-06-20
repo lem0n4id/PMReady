@@ -16,6 +16,33 @@ import Img from '../components/images/PMReady.png';
 			@tailwind base;
 			@tailwind components;
 			@tailwind utilities;
+      .big-circle {
+        position: fixed;
+        /* bottom: -4rem;
+        left: 10%; */
+        width: 200px;
+        height: 200px;
+        background-color: #CAD593;
+        border-radius: 50%;
+      }
+      .square {
+        position: fixed;
+        /* bottom: 150px;
+        right: -37px; */
+        width: 150px;
+        height: 150px;
+        background-color: #235789;
+      }
+      .triangle {
+        position: fixed;
+        /* top: 200px;
+        left: -15px; */
+        width: 0;
+        height: 50px;
+        border-left: 32px solid transparent;
+        border-right: 32px solid transparent;
+        border-bottom: 60px solid #FF6978;
+      }
 		</style>
 	</head>
   <body class="bg-[#EDEDED] text-black font-poppins">
@@ -44,5 +71,8 @@ import Img from '../components/images/PMReady.png';
         </a> 
       </div>
     </main> 
+    <div class="big-circle -z-10 -bottom-[20%] left-4 md:-bottom-16 md:left-8"></div>
+    <div class="square -z-10 bottom-[15%] -right-28 md:-right-10"></div>  
+    <div class="triangle -z-10 top-52 -left-4"></div>  
   </body>
 </html>
